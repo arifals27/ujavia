@@ -30,10 +30,10 @@ export default function App({ Component, pageProps }) {
     const router = useRouter()
     return (
         <>
-                    <Loading/>
-                    <Layout>
-                        <Component {...pageProps} />
-                    </Layout>
+            <Loading/>
+            <Layout>
+                <Component {...pageProps} />
+            </Layout>
         </>
     )
 }

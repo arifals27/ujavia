@@ -19,7 +19,8 @@
     "next-pwa": "^5.6.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-shimmer": "^3.2.0"
+    "react-shimmer": "^3.2.0",
+    "sharp": "^0.31.3"
   },
   "devDependencies": {
     "@tailwindcss/line-clamp": "^0.4.2",

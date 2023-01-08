@@ -54,7 +54,7 @@ const Header = () => {
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
-                <Link rel={"icon"} type={"image/x-icon"} href={"/favicon.ico"}/>
+                <link rel={"icon"} type={"image/x-icon"} href={"/favicon.ico"}/>
                 <meta property="og:site_name" content={process.env.NEXT_PUBLIC_SITE_TITLE} />
                 <script
                     type="application/ld+json"
