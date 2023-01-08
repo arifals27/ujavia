@@ -44,9 +44,13 @@ const Video = ({data, params, currentUrl}) => {
             "dateModified" : `${data.released}`,
             "datePublished" : `${data.released}`,
             "itemReviewed": {
-                "@type": "VideoObject",
-                "name": `${data.code}`
+                "@type": "Movie",
+                "name": `${data.code}`,
+                "image" : `${data.poster}`,
+                "url" : `${process.env.NEXT_PUBLIC_SITE.slice(0, -1)}${asPath}`
+
             },
+            "reviewBody" : `Movie with code ${data.code} is awesome. Watch in HD now`,
             "reviewRating" : {
                 "@type" : "Rating",
                 "bestRating" : 10,
