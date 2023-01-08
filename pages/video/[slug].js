@@ -29,7 +29,7 @@ const Video = ({data, params, currentUrl}) => {
         "uploadDate": `${data.released}`,
         "genre" : `${data.genres ? data.genres[0].name : "Adult"}`,
         "duration" : `${data.runtime.replace(/(\d+):(\d+):(\d+)/, "PT$1H$2M$3S")}`,
-        "thumbnail" : `${data.poster}`,
+         "thumbnailUrl" : [`${data.poster}`],
         "embedUrl": `${videoUrl}`,
         "author": {
             "@type": "Person",
