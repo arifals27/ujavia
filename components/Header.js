@@ -115,7 +115,7 @@ const Header = () => {
                     <Link itemProp="url" title="Manhwa" href="/archive/genre/creampie" className="block py-2 px-4 text-sm hover:bg-purple-900">Creampie</Link>
                     <Link itemProp="url" title="Manhua" href="/archive/genre/cheating-wife" className="block py-2 px-4 text-sm hover:bg-purple-900">NTR</Link>
                     <Link itemProp="url" title="Adult" href="/archive/genre/amateur" className="block py-2 px-4 text-sm hover:bg-purple-900">Amateur</Link>
-                    <form action="/search/" action="/search/" onSubmit={goSearch} className="mt-3 px-5 pb-5">
+                    <form action="/search/" onSubmit={goSearch} className="mt-3 px-5 pb-5">
                         <div className="flex w-full relative">
                             <div className="relative w-full">
                                 <input type="search" id="search" name="s" className=" block p-1.5 w-full z-20 text-sm text-gray-900
