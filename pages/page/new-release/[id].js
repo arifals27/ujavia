@@ -29,7 +29,7 @@ const Released = ({data}) => {
                         }
                     </div>
                 </div>
-                <Pagination max={data.max_pages} now={data.current_page} slug={router.pathname}/>
+                <Pagination max={data.max_pages} now={data.current_page} slug={router.pathname.replace("[id]", "")}/>
             </div>
         </>
     )

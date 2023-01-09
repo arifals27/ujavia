@@ -100,7 +100,7 @@ const Video = ({data, params, currentUrl}) => {
                         <div className="mt-4">
                             <h1 className="font-bold text-2xl">{decodeURIComponent(judul)}</h1>
                         </div>
-                        <div className="detail mt-4 bg-gray-900 rounded-xl px-6 py-2">
+                        <div className="detail mt-4 bg-gray-300 dark:bg-gray-900 rounded-xl px-6 py-2">
                             <h2 className="border-b-2 border-solid inline-block font-bold text-xl mb-4">Details</h2>
                             {data.code ? (
                                 <div className="grid grid-cols-6 mb-3">
@@ -126,7 +126,7 @@ const Video = ({data, params, currentUrl}) => {
                                     <div className="col-end-7 col-span-4 md:col-span-5" itemProp={"alternateName"}>{data.actress.map(act => {
                                         return (
                                             <Link key={act.term_id} href={`/archive/${act.taxonomy}/${act.slug}`}
-                                            className="bg-gray-800 px-3 py-2 rounded-lg mb-2 mr-2 inline-block hover:bg-gray-700"
+                                            className="bg-gray-400 dark:bg-gray-800 px-3 py-2 rounded-lg mb-2 mr-2 inline-block hover:bg-gray-500 dark:hover:bg-gray-700"
                                             >{act.name}</Link>
                                         )
                                     })}</div>
@@ -138,7 +138,7 @@ const Video = ({data, params, currentUrl}) => {
                                     <div className="col-end-7 col-span-4 md:col-span-5" itemProp={"alternateName"}>{data.genres.map(genre => {
                                         return (
                                             <Link key={genre.term_id} href={`/archive/genre/${genre.slug}`}
-                                                  className="bg-gray-800 px-3 py-2 rounded-lg mb-2 mr-2 inline-block hover:bg-gray-700"
+                                                  className="bg-gray-400 dark:bg-gray-800 px-3 py-2 rounded-lg mb-2 mr-2 inline-block hover:bg-gray-500 dark:hover:bg-gray-700"
                                             >{genre.name}</Link>
                                         )
                                     })}</div>
@@ -150,7 +150,7 @@ const Video = ({data, params, currentUrl}) => {
                                     <div className="col-end-7 col-span-4 md:col-span-5" itemProp={"alternateName"}>{data.labels.map(label => {
                                         return (
                                             <Link key={label.term_id} href={`/archive/${label.taxonomy}/${label.slug}`}
-                                                  className="bg-gray-800 px-3 py-2 rounded-lg mb-2 mr-2 inline-block hover:bg-gray-700"
+                                                  className="bg-gray-400 dark:bg-gray-800 px-3 py-2 rounded-lg mb-2 mr-2 inline-block hover:bg-gray-500 dark:hover:bg-gray-700"
                                             >{label.name}</Link>
                                         )
                                     })}</div>
@@ -162,7 +162,7 @@ const Video = ({data, params, currentUrl}) => {
                                     <div className="col-end-7 col-span-4 md:col-span-5" itemProp={"alternateName"}>{data.tags.map(tag => {
                                         return (
                                             <Link key={tag.term_id} href={`/archive/${tag.taxonomy}/${tag.slug}`}
-                                                  className="bg-gray-800 px-3 py-2 rounded-lg mb-2 mr-2 inline-block hover:bg-gray-700"
+                                                  className="bg-gray-400 dark:bg-gray-800 px-3 py-2 rounded-lg mb-2 mr-2 inline-block hover:bg-gray-500 dark:hover:bg-gray-700"
                                             >{tag.name}</Link>
                                         )
                                     })}</div>
@@ -179,7 +179,7 @@ const Video = ({data, params, currentUrl}) => {
                                             return (
                                                 <>
                                                     <Link key={i} href={download.link} alt={download.name}
-                                                    className={"bg-gray-900 px-3 py-2 rounded-lg mb-2 mr-2 inline-block hover:bg-gray-700"}
+                                                    className={"bg-gray-300 dark:bg-gray-900 px-3 py-2 rounded-lg mb-2 mr-2 inline-block hover:bg-gray-500 dark:hover:bg-gray-700"}
                                                     >{download.name}</Link>
                                                 </>
                                             )
@@ -189,7 +189,7 @@ const Video = ({data, params, currentUrl}) => {
                             </div>
                         ) : ""}
                     </div>
-                    <div className="bg-gray-800">
+                    <div className="bg-gray-300 dark:bg-gray-800 mt-10 px-3 px-2 md:px-6 md:py-4 rounded-xl">
                         <DiscussionEmbed
                             dark={true}
                             shortname='komik-uwu'

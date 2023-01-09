@@ -82,15 +82,17 @@
   margin: 0;
   transition: all .2s;
 }
+*:focus {
+  outline: none;
+}
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-family: Poppins;
 }
-#disqus_thread html {
-  background: black!important;
-}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
