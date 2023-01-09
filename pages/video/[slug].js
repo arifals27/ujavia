@@ -29,7 +29,7 @@ const Video = ({data, params, currentUrl}) => {
         "uploadDate": `${data.released}`,
         "genre" : `${data.genres ? data.genres[0].name : "Adult"}`,
         "duration" : `${data.runtime.replace(/(\d+):(\d+):(\d+)/, "PT$1H$2M$3S")}`,
-         "thumbnailUrl" : [`${data.poster}`],
+        "thumbnailUrl" : [`${data.poster}`],
         "embedUrl": `${videoUrl}`,
         "author": {
             "@type": "Person",
@@ -50,7 +50,7 @@ const Video = ({data, params, currentUrl}) => {
                 "url" : `${process.env.NEXT_PUBLIC_SITE.slice(0, -1)}${asPath}`
 
             },
-            "reviewBody" : `Movie with code ${data.code} is awesome. Watch in HD now`,
+            "reviewBody" : `Movie with code ${data.code} is awesome`,
             "reviewRating" : {
                 "@type" : "Rating",
                 "bestRating" : 10,
@@ -189,19 +189,20 @@ const Video = ({data, params, currentUrl}) => {
                             </div>
                         ) : ""}
                     </div>
-                    <DiscussionEmbed
-                        className={"mt-10 rounded-lg bg-gray-900"}
-                        dark={true}
-                        shortname='komik-uwu'
-                        config={
-                            {
-                                url: `${process.env.NEXT_PUBLIC_SITE.slice(0, -1)}${pathname}`,
-                                identifier: `${data.id}`,
-                                title: data.code,
-                                language: 'en_US'
+                    <div className="bg-gray-800">
+                        <DiscussionEmbed
+                            dark={true}
+                            shortname='komik-uwu'
+                            config={
+                                {
+                                    url: `${process.env.NEXT_PUBLIC_SITE.slice(0, -1)}${pathname}`,
+                                    identifier: `${data.id}`,
+                                    title: `${data.code}`,
+                                    language: 'en_US'
+                                }
                             }
-                        }
-                    />
+                        />
+                    </div>
                 </div>
                 <div className="sidebar flex-auto w-screen md:w-3/12">
                     <div className="grid grid-flow-row gap-y-6">
