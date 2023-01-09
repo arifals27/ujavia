@@ -195,9 +195,9 @@ const Video = ({data, params, currentUrl}) => {
                             shortname='komik-uwu'
                             config={
                                 {
-                                    url: `${process.env.NEXT_PUBLIC_SITE.slice(0, -1)}${pathname}`,
-                                    identifier: `${data.id}`,
-                                    title: `${data.code}`,
+                                    url: process.env.NEXT_PUBLIC_SITE.slice(0, -1) + pathname,
+                                    identifier: data.id,
+                                    title: data.code,
                                     language: 'en_US'
                                 }
                             }
