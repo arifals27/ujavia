@@ -61,7 +61,7 @@ const Header = () => {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonSchema) }}
                 />
             </Head>
-            <nav className="bg-gray-800 shadow-lg shadow-gray-900" itemScope itemType="https://schema.org/WPHeader">
+            <nav className="bg-black/20 shadow-lg shadow-white/20 dark:shadow-gray-900 mb-10 font-bold" itemScope itemType="https://schema.org/WPHeader">
                 <div className="max-w-6xl mx-auto px-4">
                     <div className="flex justify-between">
                         <div className="hidden md:flex items-center space-x-1">
@@ -123,7 +123,6 @@ const Header = () => {
                                focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700
                                dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
                                dark:focus:border-blue-500" placeholder="Search..."
-                                       onChange={event => (doFilter(event.target.value))}
                                        autoComplete="off"
                                 />
                                 <button type="submit"

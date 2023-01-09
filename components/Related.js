@@ -7,7 +7,7 @@ const Related = (data) => {
     const poster = "https://c4.wallpaperflare.com/wallpaper/441/161/104/the-avengers-avengers-endgame-ant-man-avengers-endgame-black-panther-marvel-comics-hd-wallpaper-preview.jpg"
     return (
         <>
-        <Link href={data.content.slug} className="text-gray-500 hover:text-gray-50">
+        <Link href={data.content.slug} className="text-gray-800 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-50">
             <div className="grid grid-cols-2 gap-x-3">
                 <div className="relative pt-5625-p overflow-hidden rounded-lg">
                     <Image src={data.content.poster}

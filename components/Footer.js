@@ -5,7 +5,7 @@ import Link from "next/link";
 const Footer = () => {
     return (
         <>
-            <footer className="text-center bg-gray-900 text-white mt-10">
+            <footer className="text-center bg-gray-500 dark:bg-gray-900 text-white mt-10">
                 <div className="container px-6 pt-6 mx-auto">
                     <div className="flex justify-center mb-6">
                         <Link href="#" type="button" alt={"Our Facebook"}
