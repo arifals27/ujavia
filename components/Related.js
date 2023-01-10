@@ -1,8 +1,7 @@
-import Image from "next/image"
 import Link from "next/link";
 import {decode} from 'html-entities';
 import React from "react";
-import {Shimmer} from "react-shimmer";
+import {Shimmer, Image} from "react-shimmer";
 
 
 const Related = (data) => {
