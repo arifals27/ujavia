@@ -10,6 +10,8 @@ function generateSiteMap(posts) {
        <url>
            <loc>${process.env.NEXT_PUBLIC_SITE.slice(0, -1)}${link.link}</loc>
            <lastmod>${link.date}</lastmod>
+           <changefreq>daily</changefreq>
+            <priority>0.8</priority>
        </url>
      `;
         })
@@ -26,6 +28,8 @@ function generateTaxSiteMap(posts, type = null) {
             return `
        <url>
            <loc>${process.env.NEXT_PUBLIC_SITE}${type}/${link.slug}/</loc>
+           <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
        </url>
      `;
         })
