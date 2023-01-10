@@ -189,20 +189,20 @@ const Video = ({data, params, currentUrl}) => {
                             </div>
                         ) : ""}
                     </div>
-                    <div className="bg-gray-300 dark:bg-gray-800 mt-10 px-3 px-2 md:px-6 md:py-4 rounded-xl">
-                        <DiscussionEmbed
-                            dark={true}
-                            shortname='ujavia'
-                            config={
-                                {
-                                    url: process.env.NEXT_PUBLIC_SITE.slice(0, -1) + asPath,
-                                    identifier: data.id,
-                                    title: data.code,
-                                    language: 'en_US'
-                                }
-                            }
-                        />
-                    </div>
+                    {/*<div className="bg-gray-300 dark:bg-gray-800 mt-10 px-3 px-2 md:px-6 md:py-4 rounded-xl">*/}
+                    {/*    <DiscussionEmbed*/}
+                    {/*        dark={true}*/}
+                    {/*        shortname='ujavia'*/}
+                    {/*        config={*/}
+                    {/*            {*/}
+                    {/*                url: process.env.NEXT_PUBLIC_SITE.slice(0, -1) + asPath,*/}
+                    {/*                identifier: data.id,*/}
+                    {/*                title: data.code,*/}
+                    {/*                language: 'en_US'*/}
+                    {/*            }*/}
+                    {/*        }*/}
+                    {/*    />*/}
+                    {/*</div>*/}
                 </div>
                 <div className="sidebar flex-auto w-screen md:w-3/12 px-2 md:px-0">
                     <div className="grid grid-flow-row gap-y-6">

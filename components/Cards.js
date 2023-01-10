@@ -5,6 +5,8 @@ import {decode} from 'html-entities';
 
 
 const Card = (data) => {
+    const poster = data.content.poster
+
     return (
         <>
             <div className="my-2 px-2 w-1/2 md:w-1/4 lg:my-6 lg:px-2">
@@ -12,8 +14,11 @@ const Card = (data) => {
                     <Link href={data.content.slug}>
                         <div className="relative bg-transparent">
                             <div className="relative rounded-lg overflow-hidden pt-5625-p">
-                                <Image src={data.content.poster} NativeImgProps={{alt: data.content.title, width: 288, height: 192,
-                                    className: "absolute top-0 left-0 right-0 hover:scale-110", loading: "lazy" }}
+                                <Image src={`${data.content.poster}?w=150`} NativeImgProps={{alt: data.content.title, width: 179, height: 120,
+                                    className: "absolute top-0 left-0 right-0 hover:scale-110 w-full",
+                                    srcset: `${poster}?w=154 154w, ${poster}?w=179 179w, ${poster}?w=288 288w`,
+                                    sizes: "(max-width:415px) 179px, (max-width:768px) 154px, (min-width:768px) 288px"
+                                }}
                                        fallback={<Shimmer height={192} width={288} className={"absolute top-0 left-0 right-0"} loading={"lazy"} />}
                                 />
                                 <div className="h-10 bg-gradient-to-t from-black/80 to-transparent absolute bottom-0 w-full"></div>
