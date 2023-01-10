@@ -23,7 +23,7 @@ const Search = ({data}) => {
             <div className="w-auto pt-5">
                 <div className="container my-6 mx-auto px-4 md:px-12">
                     <div className="flex">
-                        <h2 className="text-bold text-3xl pb-3 border-b-4 border-solid">Search Result: {data.query}
+                        <h2 className="text-bold text-3xl pb-3 border-b-4 border-solid">{`Search Result: ${data.query}`}
                         </h2>
                     </div>
                     <div className="flex flex-wrap -mx-1 lg:-mx-4 align-center justify-center">
