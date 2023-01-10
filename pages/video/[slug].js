@@ -69,7 +69,7 @@ const Video = ({data, params, currentUrl}) => {
                 <meta name="og:title" content={data.title}/>
                 <meta name="og:description" content={data.site_desc}/>
                 <meta name="og:url" content={`${process.env.NEXT_PUBLIC_SITE.slice(0, -1)}${asPath}`}/>
-                <meta name="og:image" content={data.content.poster}/>
+                <meta name="og:image" content={data.poster}/>
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonSchema) }}
