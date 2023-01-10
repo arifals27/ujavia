@@ -2,6 +2,7 @@ import React from 'react'
 import Link from "next/link";
 import {Shimmer, Image} from "react-shimmer";
 import {decode} from 'html-entities';
+import Head from "next/head";
 
 
 const Card = (data) => {
@@ -9,6 +10,9 @@ const Card = (data) => {
 
     return (
         <>
+            <Head>
+                <meta name="og:image" content={data.content.poster} key="image"/>
+            </Head>
             <div className="my-2 px-2 w-1/2 md:w-1/4 lg:my-6 lg:px-2">
                 <article className="overflow-hidden grid">
                     <Link href={data.content.slug}>

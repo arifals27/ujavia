@@ -64,10 +64,12 @@ const Video = ({data, params, currentUrl}) => {
     return (
         <>
             <Head>
-                <title>{`${judul} | ${data.site_desc}`}</title>
+                <title>{`${judul} | ${data.site_tagline}`}</title>
                 <meta content={data.site_desc} name="description"/>
                 <meta name="og:title" content={data.title}/>
                 <meta name="og:description" content={data.site_desc}/>
+                <meta name="og:url" content={`${process.env.NEXT_PUBLIC_SITE.slice(0, -1)}${asPath}`}/>
+                <meta name="og:image" content={data.content.poster}/>
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonSchema) }}

@@ -11,10 +11,11 @@ const Released = ({data}) => {
     return (
         <>
             <Head>
-                <title>{`New Release - ${data.site_desc}`}</title>
+                <title>{`New Release - ${data.site_tagline}`}</title>
                 <meta content={data.site_desc} name="description"/>
                 <meta name="og:title" content={`New Release`}/>
                 <meta name="og:description" content={data.site_desc}/>
+                <meta name="og:url" content={`${process.env.NEXT_PUBLIC_SITE.slice(0, -1)}${router.asPath}`}/>
             </Head>
             <div className="w-auto pt-5">
                 <div className="container my-6 mx-auto px-4 md:px-12">

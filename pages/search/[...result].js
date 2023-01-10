@@ -2,6 +2,7 @@ import React, {Component, useState} from "react";
 import Card from "../../components/Cards";
 import Pagination from "../../components/Pagination";
 import Head from "next/head";
+import {useRouter} from "next/router";
 
 const getData = async (page) => {
     const query = page[0]
@@ -11,10 +12,15 @@ const getData = async (page) => {
     return response.json()
 }
 const Search = ({data, query}) => {
+    const router = useRouter()
     return(
         <>
             <Head>
                 <title>{`Search Result: "${data.query}" - ${data.site_title}`}</title>
+                <meta content={`List videos qith query: "${data.query}"`} name="description"/>
+                <meta name="og:title" content={`Search Result: "${data.query}" - ${data.site_title}`}/>
+                <meta name="og:description" content={`Search Result: "${data.query}"`}/>
+                <meta name="og:url" content={`${process.env.NEXT_PUBLIC_SITE.slice(0, -1)}${router.asPath}`}/>
             </Head>
             <div className="w-auto pt-5">
                 <div className="container my-6 mx-auto px-4 md:px-12">

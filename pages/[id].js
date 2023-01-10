@@ -7,7 +7,7 @@ const Home = ({data, header}) => {
     return (
         <>
             <Head>
-                <title>{`${data.site_title} - ${data.site_desc}`}</title>
+                <title>{`${data.site_title} - ${data.site_tagline}`}</title>
                 <meta content={data.site_desc} name="description"/>
                 <meta name="og:title" content={data.site_title}/>
                 <meta name="og:description" content={data.site_desc}/>
