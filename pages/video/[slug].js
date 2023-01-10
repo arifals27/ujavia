@@ -73,7 +73,7 @@ const Video = ({data, params, currentUrl}) => {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonSchema) }}
                 />
             </Head>
-            <div className="container w-auto mt-5 px-1 md:px-8 mb-5 flex flex-col md:flex-row gap-4">
+            <div className="container w-auto mt-5 md:px-8 mb-5 flex flex-col md:flex-row gap-4">
                 <div className="main flex-auto w-screen md:w-9/12">
                     <div className="flex-col">
                         <div className="w-full pt-5625-p relative overflow-hidden">
@@ -98,7 +98,7 @@ const Video = ({data, params, currentUrl}) => {
                         ) : ""
                         }
                         <div className="mt-4">
-                            <h1 className="font-bold text-2xl">{decodeURIComponent(judul)}</h1>
+                            <h1 className="font-bold text-2xl px-4 md:px-0">{decodeURIComponent(judul)}</h1>
                         </div>
                         <div className="detail mt-4 bg-gray-300 dark:bg-gray-900 rounded-xl px-6 py-2">
                             <h2 className="border-b-2 border-solid inline-block font-bold text-xl mb-4">Details</h2>
@@ -171,7 +171,7 @@ const Video = ({data, params, currentUrl}) => {
 
                         </div>
                         {data.downloads && data.downloads.length > 0 ? (
-                            <div className="mt-4">
+                            <div className="mt-4 px-4 md:px-0">
                                 <h3 className="border-b-2 border-solid inline-block font-bold text-xl mb-4">Downloads</h3>
                                 <div className="links">
                                     {
@@ -192,10 +192,10 @@ const Video = ({data, params, currentUrl}) => {
                     <div className="bg-gray-300 dark:bg-gray-800 mt-10 px-3 px-2 md:px-6 md:py-4 rounded-xl">
                         <DiscussionEmbed
                             dark={true}
-                            shortname='komik-uwu'
+                            shortname='ujavia'
                             config={
                                 {
-                                    url: process.env.NEXT_PUBLIC_SITE.slice(0, -1) + pathname,
+                                    url: process.env.NEXT_PUBLIC_SITE.slice(0, -1) + asPath,
                                     identifier: data.id,
                                     title: data.code,
                                     language: 'en_US'
@@ -204,7 +204,7 @@ const Video = ({data, params, currentUrl}) => {
                         />
                     </div>
                 </div>
-                <div className="sidebar flex-auto w-screen md:w-3/12">
+                <div className="sidebar flex-auto w-screen md:w-3/12 px-2 md:px-0">
                     <div className="grid grid-flow-row gap-y-6">
                         {data.related.map(relate => {
                             return <Related key={relate.id} content={relate}/>
