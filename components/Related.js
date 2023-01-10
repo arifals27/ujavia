@@ -13,7 +13,7 @@ const Related = (data) => {
                 <div className="relative pt-5625-p overflow-hidden rounded-lg">
                     <Image src={data.content.poster} NativeImgProps={{alt: data.content.title, width: 144, height: 81,
                         className: "absolute top-0 left-0 right-0 hover:scale-110 w-full",
-                        srcset: `${poster}?w=144 144w, ${poster}?w=179 179w,${poster}?w=193 193w`,
+                        srcSet: `${poster}?w=144 144w, ${poster}?w=179 179w,${poster}?w=193 193w`,
                         sizes: "(max-width:415px) 193px, (min-width:768px) 144px"
                     }}
                            fallback={<Shimmer height={81} width={144} className={"absolute top-0 left-0 right-0"} loading={"lazy"} />}

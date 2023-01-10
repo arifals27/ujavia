@@ -20,7 +20,7 @@ const Card = (data) => {
                             <div className="relative rounded-lg overflow-hidden pt-5625-p">
                                 <Image src={`${data.content.poster}?w=150`} NativeImgProps={{alt: data.content.title, width: 179, height: 120,
                                     className: "absolute top-0 left-0 right-0 hover:scale-110 w-full",
-                                    srcset: `${poster}?w=154 154w, ${poster}?w=179 179w, ${poster}?w=288 288w`,
+                                    srcSet: `${poster}?w=154 154w, ${poster}?w=179 179w, ${poster}?w=288 288w`,
                                     sizes: "(max-width:415px) 179px, (max-width:768px) 154px, (min-width:768px) 288px"
                                 }}
                                        fallback={<Shimmer height={192} width={288} className={"absolute top-0 left-0 right-0"} loading={"lazy"} />}

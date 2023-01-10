@@ -16,7 +16,7 @@ const Header = () => {
     const goSearch = (e) => {
         e.preventDefault();
         const query = e.target.s.value;
-        router.push("/search/" + query , undefined, { shallow: true })
+        router.push("/search/" + query)
     }
     const siteurl = process.env.NEXT_PUBLIC_SITE
     const jsonSchema = [{
@@ -65,10 +65,10 @@ const Header = () => {
                 <div className="max-w-6xl mx-auto px-4">
                     <div className="flex justify-between">
                         <div className="hidden md:flex items-center space-x-1">
-                            <Link itemProp="url" title="Manga" href="/archive/genre/big-tits" className="py-5 px-3 hover:text-cyan-500">Big Tits</Link>
-                            <Link itemProp="url" title="Manhwa" href="/archive/genre/creampie" className="py-5 px-3 hover:text-cyan-500">Creampie</Link>
-                            <Link itemProp="url" title="Manhua" href="/archive/genre/cheating-wife" className="py-5 px-3 hover:text-cyan-500">NTR</Link>
-                            <Link itemProp="url" title="Adult" href="/archive/genre/amateur" className="py-5 px-3 hover:text-cyan-500">Amateur</Link>
+                            <Link itemProp="url" title="Genre List" href="/list/genre" className="py-5 px-3 hover:text-cyan-500">Genres List</Link>
+                            <Link itemProp="url" title="Code List" href="/list/code" className="py-5 px-3 hover:text-cyan-500">Codes List</Link>
+                            <Link itemProp="url" title="Label List" href="/list/label" className="py-5 px-3 hover:text-cyan-500">Labels List</Link>
+                            <Link itemProp="url" title="Actress List" href="/list/actress" className="py-5 px-3 hover:text-cyan-500">Actress List</Link>
                         </div>
                         <div>
                             <Link itemProp="url" title="Home" href="/" className="flex items-center py-5 px-2 text-violet-500 hover:text-cyan-400">
@@ -111,10 +111,10 @@ const Header = () => {
                     </div>
                 </div>
                 <div className={`mobile-menu ${mobileMenu ? '' : 'hidden'} md:hidden`}>
-                    <Link itemProp="url" title="Manga" href="/archive/genre/big-tits" className="block py-2 px-4 text-sm hover:bg-purple-900">Big Tits</Link>
-                    <Link itemProp="url" title="Manhwa" href="/archive/genre/creampie" className="block py-2 px-4 text-sm hover:bg-purple-900">Creampie</Link>
-                    <Link itemProp="url" title="Manhua" href="/archive/genre/cheating-wife" className="block py-2 px-4 text-sm hover:bg-purple-900">NTR</Link>
-                    <Link itemProp="url" title="Adult" href="/archive/genre/amateur" className="block py-2 px-4 text-sm hover:bg-purple-900">Amateur</Link>
+                    <Link itemProp="url" title="Genre List" href="/list/genre" className="block py-2 px-4 text-sm hover:bg-purple-900">Genre List</Link>
+                    <Link itemProp="url" title="Code List" href="/list/code" className="block py-2 px-4 text-sm hover:bg-purple-900">Code List</Link>
+                    <Link itemProp="url" title="Label List" href="/list/label" className="block py-2 px-4 text-sm hover:bg-purple-900">Label List</Link>
+                    <Link itemProp="url" title="Actress List" href="/list/actress" className="block py-2 px-4 text-sm hover:bg-purple-900">Actress List</Link>
                     <form action="/search/" onSubmit={goSearch} className="mt-3 px-5 pb-5">
                         <div className="flex w-full relative">
                             <div className="relative w-full">
