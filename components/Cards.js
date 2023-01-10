@@ -6,7 +6,6 @@ import Image from "next/image"
 
 
 const Card = (data) => {
-    const poster = "https://c4.wallpaperflare.com/wallpaper/441/161/104/the-avengers-avengers-endgame-ant-man-avengers-endgame-black-panther-marvel-comics-hd-wallpaper-preview.jpg"
     return (
         <>
             <div className="my-2 px-2 w-1/2 md:w-1/4 lg:my-6 lg:px-2">
