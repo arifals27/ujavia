@@ -79,8 +79,10 @@ const Video = ({data, params, currentUrl}) => {
                 <div className="main flex-auto w-screen md:w-9/12">
                     <div className="flex-col">
                         <div className="w-full pt-5625-p relative overflow-hidden">
+                            <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-tr from-purple-800 to-cyan-600 animate-pulse"/>
                             <iframe src={`${videoUrl}?poster=${data.poster}`} id="player"
                                     allowFullScreen={true}
+                                    loading="lazy"
                                     className="w-full h-full absolute top-0 left-0"></iframe>
                         </div>
                         {
