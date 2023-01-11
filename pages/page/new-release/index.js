@@ -44,9 +44,13 @@ const getData = async () => {
 
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
+    context.res.setHeader(
+        'Cache-Control',
+        'public, s-maxage=10800, stale-while-revalidate=86400'
+    )
     const data = await getData()
-    return { props: {data : data}, revalidate: 10800}
+    return { props: {data : data}}
 }
 
 export default  Released

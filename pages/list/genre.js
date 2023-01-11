@@ -61,9 +61,13 @@ const Genres = ({data, params}) => {
 }
 
 // This gets called on every request
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
+    context.res.setHeader(
+        'Cache-Control',
+        'public, s-maxage=84600, stale-while-revalidate=2628000'
+    )
     const myData = await getData()
-    return { props: {data : myData}, revalidate: 86400 }
+    return { props: {data : myData} }
 }
 
 export default Genres

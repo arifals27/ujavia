@@ -55,10 +55,14 @@ const getData = async (slug = "") => {
 
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
+    context.res.setHeader(
+        'Cache-Control',
+        'public, s-maxage=3600, stale-while-revalidate=10800'
+    )
     const data = await getData()
     const newRelease = await getData("new-released/")
-    return { props: {data : data, newpost : newRelease}, revalidate: 10800}
+    return { props: {data : data, newpost : newRelease}}
 }
 
 export default Home
