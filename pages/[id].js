@@ -42,7 +42,7 @@ const getData = async (page) => {
 
 export async function getServerSideProps(context) {
     context.res.setHeader('Cache-Control',
-        'public, s-maxage=10, stale-while-revalidate=59')
+        'public, s-maxage=3600, stale-while-revalidate=10800')
     const data = await getData(context.params.id)
     return { props: {data : data, header : context.req.headers.host}}
 }

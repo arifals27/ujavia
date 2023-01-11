@@ -61,13 +61,9 @@ const Tags = ({data}) => {
 }
 
 // This gets called on every request
-export async function getServerSideProps(context) {
-    context.res.setHeader(
-        'Cache-Control',
-        'public, s-maxage=60, stale-while-revalidate=600'
-    )
+export async function getStaticProps(context) {
     const myData = await getData()
-    return { props: {data : myData} }
+    return { props: {data : myData}, revalidate: 86400 }
 }
 
 export default Tags

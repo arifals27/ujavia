@@ -42,13 +42,14 @@ const prevButton = (now, max, slug) => {
 const Pagination = (page) => {
     const start = page.now < 3 ? 1 : page.now - 2;
     const slug = typeof page.slug !== "undefined" ? page.slug : ""
+    const index = page.max > 5 ? 5 : page.max
     return(
         <div className="items-center justify-center flex">
             <nav className="">
                 <ul className="xs:mt-0 mt-2 inline-flex items-center -space-x-px">
                     {prevButton(page.now, page.max, slug)}
                     {
-                        [ ...Array(5).keys() ].map(i => {
+                        [ ...Array(index).keys() ].map(i => {
                             return (
                                 <li key={i}>
                                     <Link href={`${slug}/${start+i}`} type={"button"}

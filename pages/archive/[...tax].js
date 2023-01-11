@@ -48,7 +48,7 @@ const Taxonomy = ({data, params}) => {
 export async function getServerSideProps(context) {
     context.res.setHeader(
         'Cache-Control',
-        'public, s-maxage=60, stale-while-revalidate=600'
+        'public, s-maxage=3600, stale-while-revalidate=10800'
     )
     const myData = await getData(context.params.tax)
     return { props: {data : myData, params: context.params.tax} }

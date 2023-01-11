@@ -46,7 +46,7 @@ const Search = ({data, query}) => {
 export async function getServerSideProps(context) {
     context.res.setHeader(
         'Cache-Control',
-        'public, s-maxage=60, stale-while-revalidate=600'
+        'public, s-maxage=3600, stale-while-revalidate=10800'
     )
     const myData = await getData(context.params.result)
     return { props: {data : myData, query: context.params.result[0]} }
