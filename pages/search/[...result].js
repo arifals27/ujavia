@@ -37,7 +37,7 @@ const Search = ({data, query}) => {
                     </div>
                 </div>
             </div>
-            <Pagination max={data.oldest_page} now={data.current_page} slug={`/search/${query}`} />
+            <Pagination max={data.max_pages} now={data.current_page} slug={`/search/${query}`} />
         </>
     )
 }

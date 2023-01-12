@@ -47,7 +47,7 @@ const Labels = ({data}) => {
                     <div className="grid grid-cols-4 gap-4" id="taxlist">
                         {data.itemLists.map(tag => {
                             return (<>
-                                <Link href={`/archive/genre/${tag.slug}`} alt={tag.name} className="hover:rounded-lg hover:bg-black/20 px-4 py-2">
+                                <Link href={`/archive/label/${tag.slug}`} alt={tag.name} className="hover:rounded-lg hover:bg-black/20 px-4 py-2">
                                     <h3 className="font-bold text-blue-700 dark:text-cyan-600">{tag.name}</h3>
                                     <span className="text-sm text-gray-500">{tag.count} videos</span>
                                 </Link>

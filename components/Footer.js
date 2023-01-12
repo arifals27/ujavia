@@ -8,7 +8,7 @@ const Footer = () => {
             <footer className="text-center bg-gray-500 dark:bg-gray-900 text-white mt-10">
                 <div className="container px-6 pt-6 mx-auto">
                     <div className="flex justify-center mb-6">
-                        <Link href="#" type="button" alt={"Our Facebook"}
+                        <Link href="#" type="button" alt={"Our Facebook"} aria-label="Facebook"
                               className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
                             <svg aria-hidden="true"
                                  focusable="false"
@@ -26,7 +26,7 @@ const Footer = () => {
                             </svg>
                         </Link>
 
-                        <Link href="#" type="button" alt={"Our Twitter"}
+                        <Link href="#" type="button" alt={"Our Twitter"} aria-label="Twitter"
                               className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
                             <svg aria-hidden="true"
                                  focusable="false"
@@ -44,7 +44,7 @@ const Footer = () => {
                             </svg>
                         </Link>
 
-                        <Link href="#" type="button" alt={"Our Google"}
+                        <Link href="#" type="button" alt={"Our Google"} aria-label="Google"
                               className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
                             <svg aria-hidden="true"
                                  focusable="false"
@@ -62,7 +62,7 @@ const Footer = () => {
                             </svg>
                         </Link>
 
-                        <Link href="#" type="button" alt={"Our Instagram"}
+                        <Link href="#" type="button" alt={"Our Instagram"} aria-label="Instagram"
                               className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
                             <svg aria-hidden="true"
                                  focusable="false"
@@ -80,7 +80,7 @@ const Footer = () => {
                             </svg>
                         </Link>
 
-                        <Link href="#" type="button" alt={"Our Linkedin"}
+                        <Link href="#" type="button" alt={"Our Linkedin"} aria-label="Linkedin"
                               className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
                             <svg aria-hidden="true"
                                  focusable="false"
@@ -98,7 +98,7 @@ const Footer = () => {
                             </svg>
                         </Link>
 
-                        <Link href="#" type="button" alt={"Our Github"}
+                        <Link href="#" type="button" alt={"Our Github"} aria-label="Github"
                               className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
                             <svg aria-hidden="true"
                                  focusable="false"

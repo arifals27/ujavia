@@ -44,7 +44,7 @@ const Genres = ({data, params}) => {
                                className="px-3 py-2 rounded-lg"
                         />
                     </div>
-                    <div className="grid grid-cols-4 gap-4" id="taxlist">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4" id="taxlist">
                         {data.itemLists.map(genre => {
                             return (<>
                             <Link href={`/archive/genre/${genre.slug}`} alt={genre.name} className="hover:rounded-lg hover:bg-black/20 px-4 py-2">

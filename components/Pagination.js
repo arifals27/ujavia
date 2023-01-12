@@ -21,7 +21,7 @@ const nextButton = (now, max, slug) => {
     }
 }
 const prevButton = (now, max, slug) => {
-    if(now > 1 && now < max && now !== 1){
+    if(now > 1 && now <= max && now !== 1){
         return (
             <li>
                 <Link href={`${slug}/${now-1}`} type={"button"}
@@ -51,11 +51,15 @@ const Pagination = (page) => {
                     {
                         [ ...Array(index).keys() ].map(i => {
                             return (
-                                <li key={i}>
-                                    <Link href={`${slug}/${start+i}`} type={"button"}
-                                          className={`${start+i === page.now ? "dark:bg-gray-600 cursor-not-allowed" : ''} text-center w-12 border border-gray-800 py-2 leading-tight text-cyan-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white`}>{start+i}
-                                    </Link>
-                                </li>
+                                <>
+                                    {start+i > page.max ? "" : (
+                                        <li key={i}>
+                                            <Link href={`${slug}/${start+i}`} type={"button"}
+                                                  className={`${start+i === page.now ? "dark:bg-gray-600 cursor-not-allowed" : ''} text-center w-12 border border-gray-800 py-2 leading-tight text-cyan-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white`}>{start+i}
+                                            </Link>
+                                        </li>
+                                    )}
+                                </>
                             )
                         })
                     }
